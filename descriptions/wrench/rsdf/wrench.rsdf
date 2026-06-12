@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<robot name="wrench">
+
+  <!-- ========================= -->
+  <!-- OPEN END (front, +X side) -->
+  <!-- ========================= -->
+   <gripper_surface name="OpenedEnd" link="wrench_link">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0785 0.0 0.0" />
+    <motor rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" max_torque="1000" />
+    <points> 
+      <origin rpy="0.0 -1.570796327 0.0" xyz="-0.012 0.0 0.0" />
+      <origin rpy="1.570796327 0.0 0.0" xyz="0.0 -0.0101 0.0" />
+      <origin rpy="-1.570796327 0.0 0.0" xyz="0.0 0.0101 0.0" />
+    </points>
+    <material name="metal" />
+  </gripper_surface>
+
+  <!-- ============================ -->
+  <!-- CLOSED END (back, -X side)  -->
+  <!-- ============================ -->
+  <gripper_surface name="ClosedEnd" link="wrench_link">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0815 0.0 0.0" />
+    <motor rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" max_torque="1000" />
+    <points> 
+      <origin rpy="1.570796327 0.0 0.0" xyz="0.0 -0.0101 0.0" />
+      <origin rpy="-1.570796327 0.0 0.0" xyz="0.0 0.0101 0.0" />
+      <origin rpy="-1.570796327 1.047197551 0.0" xyz="0.00875 0.00505 0.0" />
+      <origin rpy="-1.570796327 -1.047197551 0.0" xyz="-0.00875 0.00505 0.0" />
+      <origin rpy="1.570796327 1.047197551 0.0" xyz="0.00875 -0.00505 0.0" />
+      <origin rpy="1.570796327 -1.047197551 0.0" xyz="-0.00875 -0.00505 0.0" />
+    </points>
+    <material name="metal" />
+  </gripper_surface>
+
+  <!-- ============================ -->
+  <!-- SHAFT REGION (center grasp) -->
+  <!-- x ∈ [-0.05, 0.04]          -->
+  <!-- ============================ -->
+
+  <!-- TOP SHAFT -->
+  <planar_surface name="ShaftTop" link="wrench_link">
+    <origin rpy="0 0 0" xyz="-0.01 0 0.004" />
+    <points>
+      <point xy="-0.05 -0.014" /> 0.0148 0.014
+      <point xy="0.05 -0.014" />
+      <point xy="0.05 0.014" />
+      <point xy="-0.05 0.014" />
+    </points>
+    <material name="metal" />
+  </planar_surface>
+
+  <!-- BOTTOM SHAFT -->
+  <planar_surface name="ShaftBottom" link="wrench_link">
+    <origin rpy="3.141592654 0 0" xyz="-0.01 0 -0.004" />
+    <points>
+      <point xy="-0.05 -0.014" />
+      <point xy="0.05 -0.014" />
+      <point xy="0.05 0.014" />
+      <point xy="-0.05 0.014" />
+    </points>
+    <material name="metal" />
+  </planar_surface>
+
+  <!-- LEFT SHAFT -->
+  <planar_surface name="ShaftLeft" link="wrench_link">
+    <origin rpy="-1.570796327 0 0" xyz="-0.01 0.014 0" />
+    <points>
+      <point xy="-0.05 -0.004" />
+      <point xy="0.05 -0.004" />
+      <point xy="0.05 0.004" />
+      <point xy="-0.05 0.004" />
+    </points>
+    <material name="metal" />
+  </planar_surface>
+
+  <!-- RIGHT SHAFT -->
+  <planar_surface name="ShaftRight" link="wrench_link">
+    <origin rpy="1.570796327 0 0" xyz="-0.01 -0.014 0" />
+    <points>
+      <point xy="-0.05 -0.004" />
+      <point xy="0.05 -0.004" />
+      <point xy="0.05 0.004" />
+      <point xy="-0.05 0.004" />
+    </points>
+    <material name="metal" />
+  </planar_surface>
+
+</robot>

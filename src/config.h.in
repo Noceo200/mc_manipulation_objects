@@ -1,0 +1,6 @@
+#pragma once
+
+namespace mc_rtc
+{
+  constexpr auto OBJECTS_DESCRIPTION_PATH = "@MANIP_DESCRIPTION_PATH@";
+}
