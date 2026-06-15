@@ -1,62 +1,62 @@
  <?xml version="1.0" ?>
 <robot name="dice">
  <planar_surface name="Top" link="dice_link">
-    <origin rpy="0 0 0" xyz="0 0 0.1" />
+    <origin rpy="0 0 0" xyz="0 0 0.01" />
     <points>
-      <point xy="-0.1 -0.1" />
-      <point xy="0.1 -0.1" />
-      <point xy="0.1 0.1" />
-      <point xy="-0.1 0.1" />
+      <point xy="-0.01 -0.01" />
+      <point xy="0.01 -0.01" />
+      <point xy="0.01 0.01" />
+      <point xy="-0.01 0.01" />
     </points>
     <material name="plastic" />
   </planar_surface>
   <planar_surface name="Bottom" link="dice_link">
-    <origin rpy="3.141592654 0 0" xyz="0 0 -0.1" />
+    <origin rpy="3.141592654 0 0" xyz="0 0 -0.01" />
     <points>
-      <point xy="-0.1 -0.1" />
-      <point xy="0.1 -0.1" />
-      <point xy="0.1 0.1" />
-      <point xy="-0.1 0.1" />
+      <point xy="-0.01 -0.01" />
+      <point xy="0.01 -0.01" />
+      <point xy="0.01 0.01" />
+      <point xy="-0.01 0.01" />
     </points>
     <material name="plastic" />
   </planar_surface>
   <planar_surface name="Front" link="dice_link">
-    <origin rpy="0 1.570796327 0" xyz="0.1 0 0" />
+    <origin rpy="0 1.570796327 0" xyz="0.01 0 0" />
     <points>
-      <point xy="-0.1 -0.1" />
-      <point xy="0.1 -0.1" />
-      <point xy="0.1 0.1" />
-      <point xy="-0.1 0.1" />
+      <point xy="-0.01 -0.01" />
+      <point xy="0.01 -0.01" />
+      <point xy="0.01 0.01" />
+      <point xy="-0.01 0.01" />
     </points>
     <material name="plastic" />
   </planar_surface>
   <planar_surface name="Back" link="dice_link">
-    <origin rpy="0 -1.570796327 0" xyz="-0.1 0 0" />
+    <origin rpy="0 -1.570796327 0" xyz="-0.01 0 0" />
     <points>
-      <point xy="-0.1 -0.1" />
-      <point xy="0.1 -0.1" />
-      <point xy="0.1 0.1" />
-      <point xy="-0.1 0.1" />
+      <point xy="-0.01 -0.01" />
+      <point xy="0.01 -0.01" />
+      <point xy="0.01 0.01" />
+      <point xy="-0.01 0.01" />
     </points>
     <material name="plastic" />
   </planar_surface>
   <planar_surface name="Right" link="dice_link">
-    <origin rpy="1.570796327 0 0" xyz="0 -0.1 0" />
+    <origin rpy="1.570796327 0 0" xyz="0 -0.01 0" />
     <points>
-      <point xy="-0.1 -0.1" />
-      <point xy="0.1 -0.1" />
-      <point xy="0.1 0.1" />
-      <point xy="-0.1 0.1" />
+      <point xy="-0.01 -0.01" />
+      <point xy="0.01 -0.01" />
+      <point xy="0.01 0.01" />
+      <point xy="-0.01 0.01" />
     </points>
     <material name="plastic" />
   </planar_surface>
   <planar_surface name="left" link="dice_link">
-    <origin rpy="-1.570796327 0 0" xyz="0 0.1 0" />
+    <origin rpy="-1.570796327 0 0" xyz="0 0.01 0" />
     <points>
-      <point xy="-0.1 -0.1" />
-      <point xy="0.1 -0.1" />
-      <point xy="0.1 0.1" />
-      <point xy="-0.1 0.1" />
+      <point xy="-0.01 -0.01" />
+      <point xy="0.01 -0.01" />
+      <point xy="0.01 0.01" />
+      <point xy="-0.01 0.01" />
     </points>
     <material name="plastic" />
   </planar_surface>
