@@ -1,0 +1,23 @@
+<mujoco model="dice">
+  <compiler angle="radian" meshdir="../meshes"/>
+  <asset>
+    <mesh name="body" file="dice.STL" />
+  </asset>
+
+  <worldbody>
+    <body name="base_link" pos="0 0 0">
+    <inertial
+        pos="0 0 0"
+        mass="0.086"
+        diaginertia="0.00667 0.00667 0.00667"/>
+    <joint name="root" type="free" />
+    <geom
+      type="mesh"
+      mesh="body"
+      contype="1"
+      conaffinity="1"
+      group="1"
+      density="0"/>
+    </body>
+  </worldbody>
+</mujoco>

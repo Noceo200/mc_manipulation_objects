@@ -55,7 +55,7 @@ extern "C"
 
 ROBOT_MODULE_API void MC_RTC_ROBOT_MODULE(std::vector<std::string> & names)
 {
-  names = {"manip/Box", "manip/Cylinder", "manip/Sphere", "manip/wrench"};
+  names = {"manip/Box", "manip/Cylinder", "manip/Sphere", "manip/wrench", "manip/dice"};
 }
 
 ROBOT_MODULE_API void destroy(mc_rbdyn::RobotModule * ptr)
@@ -83,7 +83,10 @@ ROBOT_MODULE_API mc_rbdyn::RobotModule * create(const std::string & n)
   {
     return new mc_robots::ManipulationObjectRobotModule("wrench");
   }
-
+  else if(n == "manip/dice")
+  {
+    return new mc_robots::ManipulationObjectRobotModule("dice");
+  }
   mc_rtc::log::error("mc_manipulation_objects module cannot create an object of type {}", n);
   return nullptr;
 }
