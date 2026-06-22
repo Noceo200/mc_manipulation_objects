@@ -1,12 +1,8 @@
 <mujoco model="sphere">
   <compiler angle="radian" meshdir="../meshes"/>
-  <option timestep="0.001" integrator="RK4" iterations="10" ls_iterations="10">
-    <flag eulerdamp="enable"/>
-  </option>
   <asset>
     <mesh name="body" file="sphere.STL"/>
   </asset>
-
   <worldbody>
     <body name="sphere_link" pos="0 0 0">
       <joint name="root" type="free" />

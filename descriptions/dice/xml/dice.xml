@@ -1,20 +1,8 @@
 <mujoco model="dice">
   <compiler angle="radian" meshdir="../meshes"/>
-  <option timestep="0.001" integrator="RK4" iterations="10" ls_iterations="10">
-    <flag eulerdamp="enable"/>
-  </option>
   <asset>
     <mesh name="body" file="dice.STL" />
   </asset>
-
-  <!-- Contact stability parameters -->
-  <default>
-  <geom
-      solref="0.02 1"
-      solimp="0.9 0.95 0.001"
-      friction="1.2 0.01 0.0001"/>
-  </default>
-
   <worldbody>
     <body name="base_link" pos="0 0 0">
     <joint name="root" type="free" />
