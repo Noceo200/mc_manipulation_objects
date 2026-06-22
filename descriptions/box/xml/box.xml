@@ -22,18 +22,18 @@
 
   <default>
     <!-- MATERIALS -->
-    <default class="rubber">
-      <geom solref="0.03 1"
-            solimp="0.85 0.9 0.001"
+    <default class="rigid_sticky">
+      <geom solref="0.001 1"
+            solimp="0.95 0.99 0.0005"
             friction="1.8 0.5 0.0005"/>
     </default>
-    <default class="plastic">
-      <geom solref="0.02 1"
-            solimp="0.9 0.95 0.001"
+    <default class="rigid_normal">
+      <geom solref="0.001 1"
+            solimp="0.95 0.99 0.0005"
             friction="1.0 0.3 0.0001"/>
     </default>
-    <default class="metal">
-      <geom solref="0.01 1"
+    <default class="rigid_slippy">
+      <geom solref="0.001 1"
             solimp="0.95 0.99 0.0005"
             friction="0.6 0.2 0.0001"/>
     </default>
@@ -48,7 +48,7 @@
     <!-- Inertial properties computed automatically from mesh -->
     <geom
       type="mesh"
-      class="plastic"
+      class="rigid_sticky"
       mesh="body"
       mass="1.0"
       contype="1"
