@@ -48,7 +48,7 @@
     <!-- Inertial properties computed automatically from mesh -->
     <geom
       type="mesh"
-      class="plastic"
+      class="rubber"
       mesh="body"
       mass="0.086"
       contype="1"
