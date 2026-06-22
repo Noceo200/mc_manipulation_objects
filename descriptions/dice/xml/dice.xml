@@ -10,9 +10,9 @@
   <worldbody>
     <body name="base_link" pos="0 0 0">
     <inertial
-        pos="0 0 0"
-        mass="0.086"
-        diaginertia="0.00667 0.00667 0.00667"/>
+      pos="0 0 0"
+      mass="0.086"
+      diaginertia="5.73e-6 5.73e-6 5.73e-6"/>
     <joint name="root" type="free" />
     <geom
       type="mesh"
