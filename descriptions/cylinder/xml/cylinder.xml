@@ -1,6 +1,8 @@
 <mujoco model="cylinder">
   <compiler angle="radian" meshdir="../meshes"/>
-
+  <option timestep="0.001" integrator="RK4" iterations="10" ls_iterations="10">
+    <flag eulerdamp="enable"/>
+  </option>
   <asset>
     <mesh name="body" file="cylinder.STL"/>
   </asset>
