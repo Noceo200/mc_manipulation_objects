@@ -9,17 +9,12 @@
 
   <worldbody>
     <body name="wrench_link" pos="0 0 0">
-
-      <inertial
-      pos="0 0 0"
-      mass="0.745"
-      diaginertia="0.000162 0.00237 0.00253"/>
-
       <joint name="root" type="free" />
-
+        <!-- Inertial properties computed automatically from mesh -->
         <geom
           type="mesh"
           mesh="body"
+          mass="0.745"
           contype="1"
           conaffinity="1"
           group="1"

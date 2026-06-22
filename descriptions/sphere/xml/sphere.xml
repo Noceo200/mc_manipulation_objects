@@ -9,17 +9,12 @@
 
   <worldbody>
     <body name="sphere_link" pos="0 0 0">
-
-      <inertial
-          pos="0 0 0"
-          mass="1.0"
-          diaginertia="0.004 0.004 0.004"/>
-
       <joint name="root" type="free" />
-
+        <!-- Inertial properties computed automatically from mesh -->
         <geom
           type="mesh"
           mesh="body"
+          mass="1.0"
           contype="1"
           conaffinity="1"
           group="1"

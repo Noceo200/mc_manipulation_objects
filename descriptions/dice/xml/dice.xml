@@ -9,14 +9,12 @@
 
   <worldbody>
     <body name="base_link" pos="0 0 0">
-    <inertial
-      pos="0 0 0"
-      mass="0.086"
-      diaginertia="5.73e-6 5.73e-6 5.73e-6"/>
     <joint name="root" type="free" />
+    <!-- Inertial properties computed automatically from mesh -->
     <geom
       type="mesh"
       mesh="body"
+      mass = "0.086"
       contype="1"
       conaffinity="1"
       group="1"
