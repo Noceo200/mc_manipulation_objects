@@ -44,11 +44,11 @@
   </asset>
   <worldbody>
     <body name="wrench_link" pos="0 0 0">
-      <joint name="root" type="free" />
+      <joint name="root" type="free" damping="0.001"/>
         <!-- Inertial properties computed automatically from mesh -->
         <geom
           type="mesh"
-          class="plastic"
+          class="rubber"
           mesh="body"
           mass="0.745"
           contype="1"
