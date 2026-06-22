@@ -1,5 +1,44 @@
 <mujoco model="sphere">
   <compiler angle="radian" meshdir="../meshes"/>
+
+  <!-- mc_mujoco merge behavior note for <option> tags:
+  Optimizations for rich contacts manipulation stability (Applied to all XMLs in the Mujoco Scene, first one wins) 
+  So Options here are most probably ignored because we might have another main robot setting this -->
+  <!--
+  mc_mujoco merge behavior note for <default> tags:
+
+  - <default><geom .../></default> (top-level geom defaults) are MERGED by tag name.
+    If multiple XMLs define the same attributes (solref/solimp/friction), first-loaded value wins.
+
+  - <default><default class="...">...</default></default> (class defaults) are APPENDED (not merged).
+    During merge, mc_mujoco prefixes:
+      - each default class name
+      - each reference to class/material/mesh/... attributes
+    with the robot/object prefix, e.g. "arm_collision", "gripper_rubber".
+
+  Practical consequence:
+  Use class-based defaults for per-robot/per-object contact tuning across multiple XMLs.
+  -->
+
+  <default>
+    <!-- MATERIALS -->
+    <default class="rubber">
+      <geom solref="0.03 1"
+            solimp="0.85 0.9 0.001"
+            friction="1.8 0.5 0.0005"/>
+    </default>
+    <default class="plastic">
+      <geom solref="0.02 1"
+            solimp="0.9 0.95 0.001"
+            friction="1.0 0.3 0.0001"/>
+    </default>
+    <default class="metal">
+      <geom solref="0.01 1"
+            solimp="0.95 0.99 0.0005"
+            friction="0.6 0.2 0.0001"/>
+    </default>
+  </default>
+
   <asset>
     <mesh name="body" file="sphere.STL"/>
   </asset>
@@ -9,6 +48,7 @@
         <!-- Inertial properties computed automatically from mesh -->
         <geom
           type="mesh"
+          class="plastic"
           mesh="body"
           mass="1.0"
           contype="1"
