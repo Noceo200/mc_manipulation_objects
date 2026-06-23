@@ -42,7 +42,8 @@ ManipulationObjectRobotModule::ManipulationObjectRobotModule(const std::string &
 {
   rsdf_dir = variantRoot(variant) + "/rsdf";
 
-  bool fixed = true;
+  bool fixed = false;  // Free-flyer root: rbd::Joint::Free is inserted as joint(0),
+
   init(rbd::parsers::from_urdf_file(urdf_path, fixed));
 
   _default_attitude = {{1., 0., 0., 0., 0., 0., 0.}};
