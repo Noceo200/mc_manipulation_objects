@@ -4,7 +4,7 @@
   <!-- ========================= -->
   <!-- OPEN END (front, +X side) -->
   <!-- ========================= -->
-   <gripper_surface name="OpenedEnd" link="wrench_link">
+   <gripper_surface name="OpenedEnd" link="base_link">
     <origin rpy="0.0 0.0 0.0" xyz="0.0785 0.0 0.0" />
     <motor rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" max_torque="1000" />
     <points> 
@@ -18,7 +18,7 @@
   <!-- ============================ -->
   <!-- CLOSED END (back, -X side)  -->
   <!-- ============================ -->
-  <gripper_surface name="ClosedEnd" link="wrench_link">
+  <gripper_surface name="ClosedEnd" link="base_link">
     <origin rpy="0.0 0.0 0.0" xyz="-0.0815 0.0 0.0" />
     <motor rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" max_torque="1000" />
     <points> 
@@ -38,7 +38,7 @@
   <!-- ============================ -->
 
   <!-- TOP SHAFT -->
-  <planar_surface name="ShaftTop" link="wrench_link">
+  <planar_surface name="ShaftTop" link="base_link">
     <origin rpy="0 0 0" xyz="-0.01 0 0.004" />
     <points>
       <point xy="-0.05 -0.014" /> 0.0148 0.014
@@ -50,7 +50,7 @@
   </planar_surface>
 
   <!-- BOTTOM SHAFT -->
-  <planar_surface name="ShaftBottom" link="wrench_link">
+  <planar_surface name="ShaftBottom" link="base_link">
     <origin rpy="3.141592654 0 0" xyz="-0.01 0 -0.004" />
     <points>
       <point xy="-0.05 -0.014" />
@@ -62,7 +62,7 @@
   </planar_surface>
 
   <!-- LEFT SHAFT -->
-  <planar_surface name="ShaftLeft" link="wrench_link">
+  <planar_surface name="ShaftLeft" link="base_link">
     <origin rpy="-1.570796327 0 0" xyz="-0.01 0.014 0" />
     <points>
       <point xy="-0.05 -0.004" />
@@ -74,7 +74,7 @@
   </planar_surface>
 
   <!-- RIGHT SHAFT -->
-  <planar_surface name="ShaftRight" link="wrench_link">
+  <planar_surface name="ShaftRight" link="base_link">
     <origin rpy="1.570796327 0 0" xyz="-0.01 -0.014 0" />
     <points>
       <point xy="-0.05 -0.004" />
