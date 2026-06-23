@@ -46,6 +46,9 @@ ManipulationObjectRobotModule::ManipulationObjectRobotModule(const std::string &
   init(rbd::parsers::from_urdf_file(urdf_path, fixed));
 
   _default_attitude = {{1., 0., 0., 0., 0., 0., 0.}};
+
+  _bodySensors.emplace_back("FloatingBase", "base_link",sva::PTransformd::Identity());
+
 }
 
 } // namespace mc_robots
