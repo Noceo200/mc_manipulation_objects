@@ -22,7 +22,7 @@ How to use
 Put the following in `mc_rtc.yaml`.
 ```yaml
 MainRobot: manip/Box
-Timestep: 0.002
+Timestep: 0.001
 ```
 
 The corresponding URDF, MJCF XML, RSDF, and STL assets live under `descriptions/<variant>/`.

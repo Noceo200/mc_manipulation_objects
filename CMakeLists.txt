@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
       sphere
       wrench
       dice
+      wrench_holder
   )
 
 option(INSTALL_MUJOCO_FILES "Whether to install mc_mujoco configuration files" ON)

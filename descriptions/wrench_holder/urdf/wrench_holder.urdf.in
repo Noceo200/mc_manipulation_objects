@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="wrench_holder">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+       <geometry>
+        <mesh filename="@MESH_DIR@/wrench_holder.STL"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+       <geometry>
+        <mesh filename="@MESH_DIR@/wrench_holder.STL"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
