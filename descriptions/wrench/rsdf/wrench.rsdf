@@ -85,4 +85,10 @@
     <material name="metal" />
   </planar_surface>
 
+  <!-- Cylindrical SHAFT approximation -->
+  <cylindrical_surface name="Shaft" link="base_link" radius="0.028" width="0.1">
+    <origin rpy="0 1.570796327 0" xyz="-0.01 -0.014 0" />
+    <material name="metal" />
+  </cylindrical_surface>
+
 </robot>
