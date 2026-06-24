@@ -25,7 +25,7 @@
   </asset>
   <worldbody>
     <body name="base_link" pos="0 0 0">
-      <joint name="root" type="fixed" damping="0.001"/>
+        <!-- No joint = body is rigidly fixed to the world -->
         <!-- Inertial properties computed automatically from mesh -->
         <geom
           type="mesh"
