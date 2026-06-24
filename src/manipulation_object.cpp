@@ -43,6 +43,10 @@ ManipulationObjectRobotModule::ManipulationObjectRobotModule(const std::string &
   rsdf_dir = variantRoot(variant) + "/rsdf";
 
   bool fixed = false;  // Free-flyer root: rbd::Joint::Free is inserted as joint(0),
+  if(variant == "wrench_holder")
+  {
+    fixed = true; // Fixed root: rbd::Joint::Fixed is inserted as joint(0)
+  }
 
   init(rbd::parsers::from_urdf_file(urdf_path, fixed));
 
