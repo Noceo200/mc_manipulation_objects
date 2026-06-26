@@ -21,7 +21,7 @@
   -->
 
   <default>
-    <!-- MATERIALS -->
+    <!-- MATERIALS 
     <default class="rigid_sticky">
       <geom solref="0.001 1"
             solimp="0.95 0.99 0.0005"
@@ -37,10 +37,31 @@
             solimp="0.95 0.99 0.0005"
             friction="0.6 0.2 0.0001"/>
     </default>
+    -->
+    <default class="collision">
+        <geom group="3"
+              contype="1"
+              conaffinity="1"
+              solref="0.001 1"
+              solimp="0.95 0.99 0.0005"
+              friction="1.8 0.5 0.0005"
+              density="0"/>  <!--  Density set to 0 for collision geoms to avoid affecting dynamics -->
+    </default>
   </default>
 
   <asset>
     <mesh name="body" file="wrench.STL"/>
+    <mesh name="c0" file="c0.STL"/>
+    <mesh name="c1" file="c1.STL"/>
+    <mesh name="c2" file="c2.STL"/>
+    <mesh name="c3" file="c3.STL"/>
+    <mesh name="c4" file="c4.STL"/>
+    <mesh name="c5" file="c5.STL"/>
+    <mesh name="c6" file="c6.STL"/>
+    <mesh name="c7" file="c7.STL"/>
+    <mesh name="c8" file="c8.STL"/>
+    <mesh name="c9" file="c9.STL"/>
+    <mesh name="c10" file="c10.STL"/>
   </asset>
   <worldbody>
     <body name="base_link" pos="0 0 0">
@@ -48,13 +69,22 @@
         <!-- Inertial properties computed automatically from mesh -->
         <geom
           type="mesh"
-          class="rigid_sticky"
           mesh="body"
           mass="0.745"
-          contype="1"
-          conaffinity="1"
-          group="1"
-          density="0"/>
+          contype="0"
+          conaffinity="0"
+          group="1"/>
+          <geom type="mesh" mesh="c0" pos="0 0 0" quat="1 0 0 0" class="collision"/>
+          <geom type="mesh" mesh="c1" pos="0 0 0" quat="1 0 0 0" class="collision"/>
+          <geom type="mesh" mesh="c2" pos="0 0 0" quat="1 0 0 0" class="collision"/>
+          <geom type="mesh" mesh="c3" pos="0 0 0" quat="1 0 0 0" class="collision"/>
+          <geom type="mesh" mesh="c4" pos="0 0 0" quat="1 0 0 0" class="collision"/>
+          <geom type="mesh" mesh="c5" pos="0 0 0" quat="1 0 0 0" class="collision"/>
+          <geom type="mesh" mesh="c6" pos="0 0 0" quat="1 0 0 0" class="collision"/>
+          <geom type="mesh" mesh="c7" pos="0 0 0" quat="1 0 0 0" class="collision"/>
+          <geom type="mesh" mesh="c8" pos="0 0 0" quat="1 0 0 0" class="collision"/>
+          <geom type="mesh" mesh="c9" pos="0 0 0" quat="1 0 0 0" class="collision"/>
+          <geom type="mesh" mesh="c10" pos="0 0 0" quat="1 0 0 0" class="collision"/>
     </body>
   </worldbody>
 
