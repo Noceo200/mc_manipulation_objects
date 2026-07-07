@@ -50,7 +50,7 @@
       type="mesh"
       class="rigid_sticky"
       mesh="body"
-      mass="0.086"
+      mass="0.018"
       contype="1"
       conaffinity="1"
       group="1"
