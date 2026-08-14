@@ -21,6 +21,8 @@
 
   <asset>
     <mesh name="body" file="dice_red_visual.obj" />
+    <texture type="2d" name="dice_red_tex" file="RedDiceTexture.png"/>
+    <material name="dice_red_mat" texture="dice_red_tex" rgba="1 1 1 1"/>
   </asset>
   <worldbody>
     <body name="base_link" pos="0 0 0">
@@ -29,6 +31,7 @@
         type="mesh"
         class="rigid_sticky"
         mesh="body"
+        material="dice_red_mat"
         mass="0.018"
         contype="1"
         conaffinity="1"
