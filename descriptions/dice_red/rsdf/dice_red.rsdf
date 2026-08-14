@@ -1,0 +1,63 @@
+ <?xml version="1.0" ?>
+<robot name="dice_red">
+ <planar_surface name="Top" link="base_link">
+    <origin rpy="0 0 0" xyz="0 0 0.015" />
+    <points>
+      <point xy="-0.015 -0.015" />
+      <point xy="0.015 -0.015" />
+      <point xy="0.015 0.015" />
+      <point xy="-0.015 0.015" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Bottom" link="base_link">
+    <origin rpy="3.141592654 0 0" xyz="0 0 -0.015" />
+    <points>
+      <point xy="-0.015 -0.015" />
+      <point xy="0.015 -0.015" />
+      <point xy="0.015 0.015" />
+      <point xy="-0.015 0.015" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Front" link="base_link">
+    <origin rpy="0 1.570796327 0" xyz="0.015 0 0" />
+    <points>
+      <point xy="-0.015 -0.015" />
+      <point xy="0.015 -0.015" />
+      <point xy="0.015 0.015" />
+      <point xy="-0.015 0.015" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Back" link="base_link">
+    <origin rpy="0 -1.570796327 0" xyz="-0.015 0 0" />
+    <points>
+      <point xy="-0.015 -0.015" />
+      <point xy="0.015 -0.015" />
+      <point xy="0.015 0.015" />
+      <point xy="-0.015 0.015" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Right" link="base_link">
+    <origin rpy="1.570796327 0 0" xyz="0 -0.015 0" />
+    <points>
+      <point xy="-0.015 -0.015" />
+      <point xy="0.015 -0.015" />
+      <point xy="0.015 0.015" />
+      <point xy="-0.015 0.015" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="left" link="base_link">
+    <origin rpy="-1.570796327 0 0" xyz="0 0.015 0" />
+    <points>
+      <point xy="-0.015 -0.015" />
+      <point xy="0.015 -0.015" />
+      <point xy="0.015 0.015" />
+      <point xy="-0.015 0.015" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+</robot>

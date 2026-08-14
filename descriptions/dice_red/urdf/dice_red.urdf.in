@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="dice_red">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="@MESH_DIR@/dice_red_visual.obj"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="@MESH_DIR@/dice_red_collision.STL"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

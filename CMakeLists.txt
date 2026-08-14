@@ -9,6 +9,8 @@ set(CMAKE_CXX_STANDARD 17)
       sphere
       wrench
       dice
+      dice_red
+      dice_yellow
       wrench_holder
   )
 
@@ -26,7 +28,13 @@ endif()
 set(MANIP_DESCRIPTION_PATH "${MC_RTC_SHARE_DESTINATION}/descriptions")
 # Install description files
 foreach(MODEL IN LISTS models)
-      install(DIRECTORY descriptions/${MODEL}/ DESTINATION ${MC_RTC_SHARE_DESTINATION}/descriptions/${MODEL} FILES_MATCHING PATTERN "*.STL" PATTERN "*.stl" PATTERN "*.urdf" PATTERN "*.rsdf")
+      install(DIRECTORY descriptions/${MODEL}/ DESTINATION ${MC_RTC_SHARE_DESTINATION}/descriptions/${MODEL}
+              FILES_MATCHING
+              PATTERN "*.STL" PATTERN "*.stl"
+              PATTERN "*.obj" PATTERN "*.OBJ"
+              PATTERN "*.mtl"
+              PATTERN "*.png" PATTERN "*.jpg" PATTERN "*.jpeg"
+              PATTERN "*.urdf" PATTERN "*.rsdf")
       set(MESH_DIR "${MANIP_DESCRIPTION_PATH}/${MODEL}/meshes")
       configure_file(descriptions/${MODEL}/urdf/${MODEL}.urdf.in ${MC_RTC_SHARE_DESTINATION}/descriptions/${MODEL}/urdf/${MODEL}.urdf)
 endforeach()
@@ -68,7 +76,13 @@ if(INSTALL_MUJOCO_FILES)
           
       configure_file(mc_mujoco/manipulation_objects.in.yaml "${CMAKE_CURRENT_BINARY_DIR}/mc_mujoco/${MODEL}.yaml")
       install(FILES "${CMAKE_CURRENT_BINARY_DIR}/mc_mujoco/${MODEL}.yaml" DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}")
-      install(DIRECTORY descriptions/${MODEL_FILE} DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}/manipulation_objects" FILES_MATCHING PATTERN "*.STL" PATTERN "*.stl" PATTERN "*.dat" PATTERN "*.xml")
+      install(DIRECTORY descriptions/${MODEL_FILE} DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}/manipulation_objects"
+              FILES_MATCHING
+              PATTERN "*.STL" PATTERN "*.stl"
+              PATTERN "*.obj" PATTERN "*.OBJ"
+              PATTERN "*.mtl"
+              PATTERN "*.png" PATTERN "*.jpg" PATTERN "*.jpeg"
+              PATTERN "*.dat" PATTERN "*.xml")
   endforeach()
 
 endif()

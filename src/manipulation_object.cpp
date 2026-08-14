@@ -63,7 +63,7 @@ extern "C"
 
 ROBOT_MODULE_API void MC_RTC_ROBOT_MODULE(std::vector<std::string> & names)
 {
-  names = {"manip/Box", "manip/Cylinder", "manip/Sphere", "manip/wrench", "manip/dice", "manip/wrench_holder"};
+  names = {"manip/Box", "manip/Cylinder", "manip/Sphere", "manip/wrench", "manip/dice", "manip/dice_red", "manip/dice_yellow", "manip/wrench_holder"};
 }
 
 ROBOT_MODULE_API void destroy(mc_rbdyn::RobotModule * ptr)
@@ -94,6 +94,14 @@ ROBOT_MODULE_API mc_rbdyn::RobotModule * create(const std::string & n)
   else if(n == "manip/dice")
   {
     return new mc_robots::ManipulationObjectRobotModule("dice");
+  }
+  else if(n == "manip/dice_red")
+  {
+    return new mc_robots::ManipulationObjectRobotModule("dice_red");
+  }
+  else if(n == "manip/dice_yellow")
+  {
+    return new mc_robots::ManipulationObjectRobotModule("dice_yellow");
   }
   else if(n == "manip/wrench_holder")
   {

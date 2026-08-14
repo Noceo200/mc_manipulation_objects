@@ -1,0 +1,46 @@
+<mujoco model="dice_red">
+  <compiler angle="radian" meshdir="../meshes"/>
+
+  <default>
+    <default class="rigid_sticky">
+      <geom solref="0.001 1"
+            solimp="0.95 0.99 0.0005"
+            friction="1.8 0.5 0.0005"/>
+    </default>
+    <default class="rigid_normal">
+      <geom solref="0.001 1"
+            solimp="0.95 0.99 0.0005"
+            friction="1.0 0.3 0.0001"/>
+    </default>
+    <default class="rigid_slippy">
+      <geom solref="0.001 1"
+            solimp="0.95 0.99 0.0005"
+            friction="0.6 0.2 0.0001"/>
+    </default>
+  </default>
+
+  <asset>
+    <mesh name="body" file="dice_red_visual.obj" />
+  </asset>
+  <worldbody>
+    <body name="base_link" pos="0 0 0">
+      <joint name="root" type="free" damping="0.001"/>
+      <geom
+        type="mesh"
+        class="rigid_sticky"
+        mesh="body"
+        mass="0.018"
+        contype="1"
+        conaffinity="1"
+        group="1"
+        density="0"/>
+    </body>
+  </worldbody>
+
+  <sensor>
+    <subtreecom    name="subtreecom"    body="base_link"/>
+    <subtreelinvel name="subtreelinvel" body="base_link"/>
+    <subtreeangmom name="subtreeangmom" body="base_link"/>
+  </sensor>
+
+</mujoco>
