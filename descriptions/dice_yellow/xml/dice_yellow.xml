@@ -29,7 +29,7 @@
       <joint name="root" type="free" damping="0.001"/>
       <geom
         type="mesh"
-        class="rigid_sticky"
+        class="rigid_normal"
         mesh="body"
         material="dice_yellow_mat"
         mass="0.018"

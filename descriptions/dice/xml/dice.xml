@@ -48,7 +48,7 @@
     <!-- Inertial properties computed automatically from mesh -->
     <geom
       type="mesh"
-      class="rigid_sticky"
+      class="rigid_normal"
       mesh="body"
       mass="0.018"
       contype="1"
