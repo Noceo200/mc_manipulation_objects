@@ -17,6 +17,11 @@
             solimp="0.95 0.99 0.0005"
             friction="0.6 0.2 0.0001"/>
     </default>
+    <default class="custom">
+      <geom solref="-2000 -80"
+            solimp="0.95 0.99 0.001"
+            friction="1.2 0.05 0.01"/>
+    </default>
   </default>
 
   <asset>
@@ -29,7 +34,7 @@
       <joint name="root" type="free" damping="0.001"/>
       <geom
         type="mesh"
-        class="rigid_normal"
+        class="custom"
         mesh="body"
         material="dice_yellow_mat"
         mass="0.018"
