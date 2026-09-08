@@ -31,7 +31,7 @@
   </asset>
   <worldbody>
     <body name="base_link" pos="0 0 0">
-      <freejoint name="root"/>
+      <joint name="root" type="free" damping="0.001"/>
       <geom
         type="mesh"
         class="custom"
