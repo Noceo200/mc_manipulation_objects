@@ -18,7 +18,7 @@
             friction="0.6 0.2 0.0001"/>
     </default>
     <default class="custom">
-      <geom solref="0.001 0.29"
+      <geom solref="0.001 0.45"
             solimp="0.95 0.99 0.0005"
             friction="1.0 0.001 0.00001"/>
     </default>
