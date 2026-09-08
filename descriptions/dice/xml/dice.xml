@@ -49,7 +49,7 @@
   </asset>
   <worldbody>
     <body name="base_link" pos="0 0 0">
-    <joint name="root" type="free" damping="0.001"/>
+    <freejoint name="root"/>
     <!-- Inertial properties computed automatically from mesh -->
     <geom
       type="mesh"
