@@ -1,0 +1,6 @@
+---
+# mc_isaac description of the mc_rtc robot module @MODEL@ (manipulation object, rigid body).
+# fixed/floating comes from the module (wrench_holder is fixed), mass and collisions are in the USD.
+usd: "@MANIP_ISAAC_USD_PATH@"
+# files referenced by the USD (relative to its folder), uploaded with it to the Isaac server
+extra_files: @MANIP_ISAAC_EXTRA_FILES@
