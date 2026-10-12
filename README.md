@@ -52,6 +52,9 @@ The package also installs mc_isaac (Isaac Sim simulation of mc_rtc controllers) 
 
 Masses match the MJCF models. Objects are simulated as single rigid bodies; fixed modules (`wrench_holder`) are
 kinematic. mc_isaac feeds their pose/velocity to the `FloatingBase` body sensor (use a `BodySensor` observer).
+The rigid body frame of each USD must be the mc_rtc `base_link` frame (mc_isaac reads the rigid body pose): the
+`dice_red` / `dice_yellow` USDs originally had a 90° X rotation (`xformOp:rotateX:unitsResolve`) on their root prim,
+above the rigid body; it was moved into the `body` mesh prim (same visuals, rigid body frame = OBJ/MJCF frame).
 
 The `.usda` files were generated with the `mc_isaac_mesh_to_usd` tool of mc_isaac, e.g.:
 
